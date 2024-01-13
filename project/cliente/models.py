@@ -20,9 +20,11 @@ class Profesor(Persona):
     
     def __str__(self) -> str:
         return f"{self.apellido}, {self.nombre}"
+    class Meta:
+        verbose_name_plural ="Profesores"
 
 class Usuario(Persona):
-    clase_id = models.ForeignKey(Clase, null = True, blank = True, on_delete = models.SET_NULL)
+    clase_id = models.ForeignKey(Clase, null = True, blank = True, on_delete = models.SET_NULL, verbose_name = "Clase")
 
     def __str__(self) -> str:
         return f"{self.apellido}, {self.nombre}"
