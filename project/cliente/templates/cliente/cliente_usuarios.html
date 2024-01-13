@@ -1,11 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pela - Fit | Usuarios</title>
-</head>
-<body>
+{% extends 'core/base.html' %}
+
+{% block title %}
+    Pela-fit | Clases
+{% endblock title %}
+{% block content %}
+    
     <h1>Usuarios</h1>
     
     <ul>
@@ -16,7 +15,4 @@
     </ul>
 
 <button> <a href="{% url 'core:index' %}">Inicio</a></button>
-
-
-</body>
-</html>
+{% endblock content %}

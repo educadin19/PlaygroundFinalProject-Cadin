@@ -1,15 +1,14 @@
-{% extends 'core/base.html' %}
+{% extends 'core/base.html' %}  
 
 {% block title %}
-    Coderhouse | Inicio    
+    Pela-fit | Inicio
 {% endblock title %}
-    
 
 {% block content %}
-    <h1>Proyecto Final</h1>
-    <h2>INICIO</h2>
 
-    <button><a href="{% url 'cliente:index' %}">Cliente</a></button>
-    <button><a href="{% url 'admin:index' %}">Administración</a></button>
-    
+<h1>Pela-Fit</h1>
+    <button> <a href="{% url 'admin:index' %}">Administración</a>  </button>
+    <button> <a href="{% url 'cliente:usuarios' %}">Usuarios</a>  </button>
+    <button> <a href="{% url 'cliente:profesores' %}">Profesores</a>  </button>
+    <button> <a href="{% url 'cliente:clases' %}">Clases</a>  </button>    
 {% endblock content %}

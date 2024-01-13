@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Pela-Fit  </title>
+    <title> 
+        {% block <title>> %}
+            Pela-Fit
+        {% endblock <title>> %}
+    </title>
 </head>
 <body>
-    <h1>Proyecto {{nombre}} </h1>
- 
- <button> <a href="{% url 'admin:index' %}">Administración</a>  </button>
- <button> <a href="{% url 'cliente:usuarios' %}">Usuarios</a>  </button>
- <button> <a href="{% url 'cliente:profesores' %}">Profesores</a>  </button>
- <button> <a href="{% url 'cliente:clases' %}">Clases</a>  </button>
+  {% block content %}
+
+
+ {% endblock content %}
 </body>
 </html>
