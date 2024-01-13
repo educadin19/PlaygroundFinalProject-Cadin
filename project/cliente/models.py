@@ -10,14 +10,19 @@ class Clase(models.Model):
 class Persona(models.Model):
     nombre = models.CharField(max_length = 100)
     apellido = models.CharField(max_length = 100)
+    
+    def __str__(self) -> str:
+        return f"{self.apellido}, {self.nombre}"
 
-    def __str__(self):
-        return self.nombre
-
+        
 class Profesor(Persona):
     clase_id = models.ForeignKey(Clase, null = True, blank = True, on_delete = models.SET_NULL)
-    def __str__(self):
-        return self.nombre
+    
+    def __str__(self) -> str:
+        return f"{self.apellido}, {self.nombre}"
 
 class Usuario(Persona):
     clase_id = models.ForeignKey(Clase, null = True, blank = True, on_delete = models.SET_NULL)
+
+    def __str__(self) -> str:
+        return f"{self.apellido}, {self.nombre}"
