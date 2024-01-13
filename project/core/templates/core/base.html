@@ -7,7 +7,10 @@
 </head>
 <body>
     <h1>Proyecto {{nombre}} </h1>
-    <p><a href="{% url 'cliente:index' %}">Ir a Profesores</a></p>
+ 
  <button> <a href="{% url 'admin:index' %}">Administración</a>  </button>
+ <button> <a href="{% url 'cliente:usuarios' %}">Usuarios</a>  </button>
+ <button> <a href="{% url 'cliente:profesores' %}">Profesores</a>  </button>
+ <button> <a href="{% url 'cliente:clases' %}">Clases</a>  </button>
 </body>
 </html>

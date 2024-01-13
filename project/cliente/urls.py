@@ -3,10 +3,12 @@ from django.urls import path, include
 from . import views
 
 
-app_name= "cliente"
+
 urlpatterns = [
     path("", views.index, name="index"),
-    path("profesores", views.index, name = "profesores" )
+    path("profesores", views.profesores_list, name = "profesores" ),
+    path("usuarios", views.usuarios_list, name = "usuarios" ),
+    path("clases", views.clases_list, name = "clases" )
 ]
 
 

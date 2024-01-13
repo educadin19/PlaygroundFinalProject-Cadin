@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pela - Fit | Profesores</title>
+</head>
+<body>
+    <h1>Profesores</h1>
+    
+    <ul>
+       {% for profesor in profesores %}
+    <li> {{profesor.nombre}} {{profesor.apellido}} </li>
+         
+        {% endfor %}</li>
+    </ul>
+
+<button> <a href="{% url 'core:index' %}">Inicio</a></button>
+
+
+</body>
+</html>
