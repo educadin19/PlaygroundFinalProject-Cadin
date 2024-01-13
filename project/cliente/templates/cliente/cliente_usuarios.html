@@ -1,18 +1,30 @@
 {% extends 'core/base.html' %}
 
 {% block title %}
-    Pela-fit | Clases
+    Pela-fit | Usuarios
 {% endblock title %}
 {% block content %}
     
     <h1>Usuarios</h1>
-    
-    <ul>
-       {% for usuario in usuarios %}
-    <li> {{usuario.nombre}} {{usuario.apellido}} </li>
+    <table border="1"> 
+        <thead>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Clase</th>
+        </thead> 
+        <tbody>
+            {% for usuario in usuarios %}
+            <tr>
+                <td>{{ usuario.nombre }}</td>
+                <td>{{ usuario.apellido }}</td>
+                <td>{{ usuario.clase_id }} </td> 
+            </tr>
          
-        {% endfor %}</li>
-    </ul>
+        {% endfor %}
+        </tbody>
+</table>
 
-<button> <a href="{% url 'core:index' %}">Inicio</a></button>
+    <button> <a href=" {% url 'cliente:nuevo_usuario' %}">Nuevo Usuario</a></button>
+
+    <button> <a href="{% url 'core:index' %}">Atrás</a></button>
 {% endblock content %}

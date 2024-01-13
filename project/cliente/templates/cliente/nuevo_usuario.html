@@ -1,0 +1,26 @@
+{% extends 'core/base.html' %}
+
+{% block title %}
+    Pela-fit | Usuarios
+{% endblock title %}
+{% block content %}
+    
+    <h1>Usuarios</h1>
+    <h2>Nuevo Usuario</h2>
+    
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+
+
+        <button type="submit">Guardar</button>
+
+
+
+    </form>
+
+
+   
+
+    <button> <a href="{% url 'core:index' %}">Atrás</a></button>
+{% endblock content %}

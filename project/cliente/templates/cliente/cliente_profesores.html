@@ -1,7 +1,7 @@
 {% extends 'core/base.html' %}
 
 {% block title %}
-    Pela-fit | Clases
+    Pela-fit | Profesores
 {% endblock title %}
 {% block content %}
     
@@ -13,6 +13,5 @@
          
         {% endfor %}</li>
     </ul>
-
-<button> <a href="{% url 'core:index' %}">Inicio</a></button>
+    <button> <a href="{% url 'core:index' %}">Atrás</a></button>
 {% endblock content %}
