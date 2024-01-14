@@ -3,10 +3,15 @@
 {% block title %}
     Pela-fit | Usuarios
 {% endblock title %}
+
 {% block content %}
-    
-    <h1>Usuarios</h1>
-    <h2>Nuevo Usuario</h2>
+<header class="masthead bg-primary text-white text-center">
+    <div class="container d-flex align-items-center flex-column">
+    <h1>Registro</h1>
+
+    <div></div>
+
+    <h4>Ingresá tus datos</h4>
     
     <form method="post">
         {% csrf_token %}
@@ -21,6 +26,8 @@
 
 
    
-
-    <button> <a href="{% url 'core:index' %}">Atrás</a></button>
+    
+    
+</div>
+</header>
 {% endblock content %}

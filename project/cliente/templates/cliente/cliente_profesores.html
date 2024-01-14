@@ -3,15 +3,37 @@
 {% block title %}
     Pela-fit | Profesores
 {% endblock title %}
+
+
+
+
+
 {% block content %}
-    
+<header class="masthead bg-primary text-white text-center">
+    <div class="container d-flex align-items-center flex-column">
     <h1>Profesores</h1>
-    
-    <ul>
-       {% for profesor in profesores %}
-    <li> {{profesor.nombre}} {{profesor.apellido}} </li>
-         
+
+</header class="masterhead bg-primary text- black text-center">
+<div class="container d-flex align-items-center flex-column">
+    <header> <table border="1"> 
+            <thead>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Clase</th>
+            </thead> 
+            <tbody>
+                {% for profesor in profesores %}
+                <tr>
+                    <td>{{ profesor.nombre }}</td>
+                    <td>{{ profesor.apellido }}</td>
+                    <td>{{ profesor.clase_id }} </td> 
+                </tr>
+       
         {% endfor %}</li>
-    </ul>
-    <button> <a href="{% url 'core:index' %}">Atrás</a></button>
-{% endblock content %}
+
+
+    </tbody>
+    </table>
+</div>
+
+{% endblock content %}   

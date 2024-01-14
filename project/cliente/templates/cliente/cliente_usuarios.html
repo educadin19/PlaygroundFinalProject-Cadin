@@ -3,10 +3,19 @@
 {% block title %}
     Pela-fit | Usuarios
 {% endblock title %}
+
+
+
+
+
 {% block content %}
-    
+<header class="masthead bg-primary text-white text-center">
+    <div class="container d-flex align-items-center flex-column">
     <h1>Usuarios</h1>
-    <table border="1"> 
+    
+</header class="masterhead bg-primary text- black text-center">
+<div class="container d-flex align-items-center flex-column">
+   <header> <table border="1"> 
         <thead>
             <th>Nombre</th>
             <th>Apellido</th>
@@ -24,7 +33,13 @@
         </tbody>
 </table>
 
-    <button> <a href=" {% url 'cliente:nuevo_usuario' %}">Nuevo Usuario</a></button>
+<div class="text-center mt-4">
+    <a class="btn btn-xl btn-outline-light"  href=" {% url 'cliente:nuevo_usuario' %}">Nuevo Usuario</a>
+       
+   
 
-    <button> <a href="{% url 'core:index' %}">Atrás</a></button>
+  
+
+</div>
+</header>
 {% endblock content %}

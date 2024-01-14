@@ -3,18 +3,34 @@
 {% block title %}
     Pela-fit | Clases
 {% endblock title %}
-{% block content %}
-    
 
+
+{% block content %}
+<header class="masthead bg-primary text-white text-center">
+    <div class="container d-flex align-items-center flex-column">
     <h1>Clases</h1>
     
-    <ul>
-       {% for clase in clases %}
-    <li> {{clase.nombre}} - {{clase.duracion}} minutos</li>
-         
+</header class="masterhead bg-primary text- black text-center">
+<div class="container d-flex align-items-center flex-column">
+    <header> <table border="1"> 
+            <thead>
+                <th><h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Clases</h2></th>
+                <th><h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Duración</h2></th>
+                
+            </thead> 
+            <tbody>
+                {% for clase in clases %}
+                <tr>
+                    <td><h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">{{ clase.nombre }}</h2></td>
+                    <td>{{ clase.duracion }} minutos</td>
+                     
+                </tr>
+       
         {% endfor %}</li>
-    </ul>
 
 
-    <button> <a href="{% url 'core:index' %}">Atrás</a></button>
-{% endblock content %}
+    </tbody>
+    </table>
+</div>
+
+{% endblock content %}  
