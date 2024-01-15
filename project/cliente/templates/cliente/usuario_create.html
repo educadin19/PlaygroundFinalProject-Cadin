@@ -1,0 +1,33 @@
+{% extends 'core/base.html' %}
+
+{% block title %}
+    Pela-fit | Usuarios
+{% endblock title %}
+
+{% block content %}
+<header class="masthead bg-primary text-white text-center">
+    <div class="container d-flex align-items-center flex-column">
+    <h1>Registro de Usuarios</h1>
+
+    <div></div>
+
+    <h4>Ingresá tus datos</h4>
+    
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+
+
+        <button type="submit">Guardar</button>
+
+
+
+    </form>
+
+
+   
+    
+    
+</div>
+</header>
+{% endblock content %}
