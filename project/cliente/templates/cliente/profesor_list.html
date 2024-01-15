@@ -15,11 +15,11 @@
 
 </header class="masterhead bg-primary text- black text-center">
 <div class="container d-flex align-items-center flex-column">
-    <header> <table border="1"> 
+    <header> <table border="0"> 
             <thead>
-                <th>Nombre</th>
-                <th>Apellido</th>
-                <th>Clase</th>
+                <th><h2 class="page-section-heading  text-center text-uppercase text-secondary pe-5 mb-0">Nombre</h2></th>
+                <th><h2 class="page-section-heading  text-center text-uppercase text-secondary pe-5 mb-0">Apellido</h2></th>
+                <th><h2 class="page-section-heading  text-center text-uppercase text-secondary pe-5 mb-0">Clase</h2></th>
             </thead> 
             <tbody>
                 {% for profesor in profesores %}
@@ -36,5 +36,5 @@
     </table>
 </div>
 <div class="text-center mt-4">
-    <a class="btn btn-xl btn-outline-light"  href=" {% url 'cliente:profesor_create' %}">Nuevo Profesor</a>
+    <a class="btn btn-xl btn-outline-dark"   href=" {% url 'cliente:profesor_create' %}">Nuevo Profesor</a>
 {% endblock content %}   

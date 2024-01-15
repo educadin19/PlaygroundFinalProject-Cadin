@@ -15,11 +15,11 @@
     
 </header class="masterhead bg-primary text- black text-center">
 <div class="container d-flex align-items-center flex-column">
-   <header> <table border="1"> 
-        <thead>
-            <th>Nombre</th>
-            <th>Apellido</th>
-            <th>Clase</th>
+   <header> <table border="0" > 
+        <thead >
+            <th><h2 class="page-section-heading  text-center text-uppercase text-secondary pe-5 mb-0">Nombre</h2></th>
+                <th><h2 class="page-section-heading  text-center text-uppercase text-secondary pe-5 mb-0">Apellido</h2></th>
+                <th><h2 class="page-section-heading  text-center text-uppercase text-secondary pe-5 mb-0">Clase</h2></th>
         </thead> 
         <tbody>
             {% for usuario in usuarios %}
@@ -34,12 +34,11 @@
 </table>
 
 <div class="text-center mt-4">
-    <a class="btn btn-xl btn-outline-light"  href=" {% url 'cliente:usuario_create' %}">Nuevo Usuario</a>
+    <a class="btn btn-xl btn-outline-dark"  href=" {% url 'cliente:usuario_create' %}">Nuevo Usuario</a>
        
    
 
-  
 
-</div>
-</header>
+
+
 {% endblock content %}

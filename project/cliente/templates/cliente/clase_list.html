@@ -12,16 +12,16 @@
     
 </header class="masterhead bg-primary text- black text-center">
 <div class="container d-flex align-items-center flex-column">
-    <header> <table border="1"> 
+    <header> <table > 
             <thead>
-                <th><h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Clases</h2></th>
-                <th><h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Duración</h2></th>
+                <th><h2 class="page-section-heading  text-center text-uppercase text-secondary pe-5 mb-0">Clases</h2></th>
+                <th><h2 class="page-section-heading text-center text-uppercase text-secondary pe-5 mb-0">Duración</h2></th>
                 
             </thead> 
             <tbody>
                 {% for clase in clases %}
                 <tr>
-                    <td><h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">{{ clase.nombre }}</h2></td>
+                    <td>{{ clase.nombre }}</h2></td>
                     <td>{{ clase.duracion }} minutos</td>
                      
                 </tr>
@@ -33,7 +33,7 @@
     </table>
 </div>
 <div class="text-center mt-4">
-    <a class="btn btn-xl btn-outline-light"  href=" {% url 'cliente:clase_create' %}">Nueva Clase</a>
+    <a class="btn btn-xl btn-outline-dark"   href=" {% url 'cliente:clase_create' %}">Nueva Clase</a>
 {% endblock content %}  
 
 
