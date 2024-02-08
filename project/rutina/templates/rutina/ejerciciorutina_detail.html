@@ -1,0 +1,25 @@
+{% extends 'core/base.html' %}
+
+{% block title %}
+Pela-fit | Rutinas
+{% endblock title %}
+
+
+{% block content %}
+<header class="masthead bg-primary text-white text-center">
+  <div class="container d-flex align-items-center flex-column">
+<div class="container">
+  <h1 class="mt-4">Rutinas</h1>
+
+<ul>
+   <li>{{object.id}}</li>  
+  <li>{{object.nombre}}</li>
+   <li>{{object.descripcion}}</li>
+</ul>
+
+
+
+  
+</div>
+{% endblock content %}
+

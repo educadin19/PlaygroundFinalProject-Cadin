@@ -1,0 +1,47 @@
+{% extends 'core/base.html' %}
+
+{% block title %}
+Pela-fit | Ejercicios
+{% endblock title %}
+
+
+{% block content %}
+<header class="masthead bg-primary text-white text-center">
+  <div class="container d-flex align-items-center flex-column">
+<div class="container">
+  <h1 class="mt-4">Ejercicios</h1>
+
+  <div class="mb-4">
+    <form action=" {% url 'rutina:ejercicio_list' %}" method="get">
+      <input type="text" class="form-control" name="consulta" placeholder="Buscar Ejercicio...">
+      
+    </form>
+  </div>
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Nombre</th>
+        <th scope="col">Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for ejercicio in object_list %}
+        <tr>
+          <td>{{ ejercicio.nombre }}</td>
+          <td>
+            <a href="{% url 'rutina:ejercicio_detail' ejercicio.id %}" class="btn btn-primary me-2">Ver</a>
+            <a href="{% url 'rutina:ejercicio_update' ejercicio.id %}" class="btn btn-warning me-2">Editar</a>
+            <a href="{% url 'rutina:ejercicio_delete' ejercicio.id %}" class="btn btn-danger">Eliminar</a>
+          </td>
+        </tr>
+      {% empty %}
+        <tr>
+          <td colspan="3" class="text-center">No hay ejercicios disponibles.</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock content %}
+

@@ -1,0 +1,45 @@
+{% extends 'core/base.html' %}
+
+{% block title %}
+    Pela-fit | Ejercicios
+{% endblock title %}
+
+{% block content %}
+<header class="masthead bg-primary text-white text-center">
+    <div class="container d-flex align-items-center flex-column">
+        <div class="container">
+            <h1 class="mt-4">{% if form.instance.pk %}Editar{% else %}Crear{% endif %} Ejercicio</h1>
+        
+            <form method="post">
+              {% csrf_token %}
+        
+              <div class="mb-3">
+                <label for="id_nombre" class="form-label">Nombre</label>
+                {{ form.nombre }}
+              </div>
+        
+              <div class="mb-3">
+                <label for="id_descripcion" class="form-label">Repeticiones</label>
+                {{ form.repeticiones }}
+              </div>
+              
+              <div class="mb-3">
+                <label for="id_descripcion" class="form-label">Duración</label>
+                {{ form.duracion }}
+              </div>
+              
+              <div class="mb-3">
+                <label for="id_descripcion" class="form-label">Descanso</label>
+                {{ form.descanso }}
+              </div>
+              
+              <div class="mb-3">
+                <label for="id_descripcion" class="form-label">Series</label>
+                {{ form.series }}
+              </div>
+        
+              <button type="submit" class="btn btn-primary">{% if form.instance.pk %}Guardar{% else %}Crear{% endif %}</button>
+              <a href="{% url 'rutina:ejerciciorutina_list' %}" class="btn btn-secondary">Cancelar</a>
+            </form>
+          </div>
+{% endblock content %}

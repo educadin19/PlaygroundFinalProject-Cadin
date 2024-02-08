@@ -1,0 +1,28 @@
+{% extends 'core/base.html' %}
+
+{% block title %}
+Pela-fit | Ejercicios
+{% endblock title %}
+
+
+{% block content %}
+<header class="masthead bg-primary text-white text-center">
+  <div class="container d-flex align-items-center flex-column">
+<div class="container">
+  <h1 class="mt-4">Ejercicios</h1>
+
+<ul>
+   <li>{{object.id}}</li>  
+  <li>{{object.nombre}}</li>
+   <li>{{object.repeticiones}}</li>
+   <li>{{object.series}}</li>
+   <li>{{object.duracion}}</li>
+   <li>{{object.descanso}}</li>
+</ul>
+
+
+
+  
+</div>
+{% endblock content %}
+

@@ -5,5 +5,10 @@ Pela-fit | Logout
 {% endblock title %}
 
 {% block content %}
-      <h1 class="display-4">Has cerrado la sesión</h1>
+<header class="masthead bg-primary text-white text-center"></header>
+<div class="container mt-0">
+  <div class="container d-flex align-items-center flex-column"></div>
+      <h1 class="display-4">Sesión finalizada.</h1>
+
+      <a href="{% url 'core:index' %}" class="btn btn-primary">Volver al inicio</a>
 {% endblock content %}

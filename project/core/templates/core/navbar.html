@@ -12,7 +12,8 @@
                 <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="{% url 'cliente:profesor_list' %}">Profesores</a></li>
                 <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="{% url 'cliente:clase_list' %}">Clases</a></li>
                 <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="{% url 'cliente:usuario_list' %}">Usuarios</a></li>
-                <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="{% url 'core:about' %}">Nosotros</a></li>
+                <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="{% url 'rutina:index' %}">Rutinas</a></li>
+                                <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="{% url 'core:about' %}">Nosotros</a></li>
                 <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded">Hola {{user.username}} !</a></li>
                 <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-0 px-0 px-lg-0 rounded-0">
                     <form action="{% url 'core:logout' %}" method="post">

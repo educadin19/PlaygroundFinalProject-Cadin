@@ -1,0 +1,31 @@
+{% extends 'core/base.html' %}
+
+
+{% block title %}
+Pela-fit | 
+{% endblock title %}
+
+
+
+{% block content %} 
+<header class="masthead bg-primary text-white text-center">
+    <div class="container d-flex align-items-center flex-column">
+
+        <a href="{% url 'rutina:ejerciciorutina_list' %}">
+            <button class= "btn btn-primary"> Ver Rutinas </button>
+        </a>
+
+        <a href="{% url 'rutina:ejerciciorutina_create' %}">
+            <button class= "btn btn-primary"> Crear Rutinas </button>
+        </a>
+
+
+        <a href="{% url 'rutina:ejercicio_list' %}">
+            <button class= "btn btn-primary"> Ver Ejercicios </button>
+        </a>
+
+        <a href="{% url 'rutina:ejercicio_create' %}">
+            <button class= "btn btn-primary"> Crear Ejercicios </button>
+        </a>
+
+{% endblock content %}
