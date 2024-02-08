@@ -11035,6 +11035,7 @@ html {
 }
 
 .footer {
+  margin:auto;
   padding-top: 5rem;
   padding-bottom: 5rem;
   background-color: #2c3e50;

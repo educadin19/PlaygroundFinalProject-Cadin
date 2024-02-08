@@ -5,17 +5,14 @@
 {% endblock title %}
 
 
-
-
-
 {% block content %}
 <header class="masthead bg-primary text-white text-center">
     <div class="container d-flex align-items-center flex-column">
     <h1>Profesores</h1>
-
+    
 </header class="masterhead bg-primary text- black text-center">
 <div class="container d-flex align-items-center flex-column">
-    <header> <table border="0"> 
+    <header> <table > 
             <thead>
                 <th><h2 class="page-section-heading  text-center text-uppercase text-secondary pe-5 mb-0">Nombre</h2></th>
                 <th><h2 class="page-section-heading  text-center text-uppercase text-secondary pe-5 mb-0">Apellido</h2></th>
@@ -37,4 +34,6 @@
 </div>
 <div class="text-center mt-4">
     <a class="btn btn-xl btn-outline-dark"   href=" {% url 'cliente:profesor_create' %}">Nuevo Profesor</a>
-{% endblock content %}   
+{% endblock content %}  
+
+
