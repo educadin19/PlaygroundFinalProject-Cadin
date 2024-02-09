@@ -1,4 +1,4 @@
-# Preentrega 3 Comisión 56060
+# Entrega trabajo Final Comisión 56060
 
 ## Nombre
 
@@ -6,7 +6,7 @@
 
 ## Resumen del proyecto
 
-- Proyecto de página de Personal Trainer
+- Proyecto de página de Personal Trainer.
 
 ## Pasos para ejecutar el proyecto
 
@@ -55,3 +55,11 @@ py .\manage.py runserver
 4) Clases - Se presenta una lista de las clases disponibles con su duiración y un botón para acceder al registro de clases. Se completa Nombre y duración de la nueva clase.
 
 5) Usuarios - Se presenta una lista de los usuarios inscriptosy un botón para acceder al registro de usuarios y las clases a las que asiste cada uno. Se completa Nombre, Apellido y se seleecciona la clase de interés.
+
+6) Rutinas - Se presenta una pantalla donde se pueden Crear nuevas rutinas o Listar las disponibles. Dentro de esta última se pueden ver en detalle, editar o eliminar rutinas. Se presenta un apartado análogo con los Ejercicios.
+
+7) Nosotros - Página que presenta un breve resumen del titular del proyecto, un botón con vínculo a Instagram y un botón que redirige a la página About acerca del desarrollador.
+
+## Link de Youtube con demostración
+
+ https://youtu.be/lcHJj60FUVY
