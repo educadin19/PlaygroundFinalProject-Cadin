@@ -14,12 +14,12 @@ class Ejercicio(models.Model):
     rutina_id = models.ForeignKey(EjercicioRutina, null=True ,blank=True,on_delete=models.SET_NULL)
     nombre = models.CharField(max_length=100)
     repeticiones = models.IntegerField()
-    duracion = models.DurationField()
+    duracion = models.IntegerField()
     series = models.IntegerField()
-    descanso = models.DurationField()
+    descanso = models.IntegerField()
 
     def __str__(self):
-        return self.nombre
+        return f"{self.rutina_id} - {self.nombre} - {self.duracion} (minutos)"
     class Meta:
         verbose_name ="Ejercicio"
         verbose_name_plural = "Ejercicios"

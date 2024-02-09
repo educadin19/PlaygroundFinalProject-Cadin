@@ -8,7 +8,7 @@
     <div class="container d-flex align-items-center flex-column">
         <!-- About Section Heading-->
         <br>
-        <h2 class="page-section-heading text-center text-uppercase text-white mt-5">Quién soy?</h2>
+        <h2 class="page-section-heading text-center text-uppercase text-white mt-5">Quién soy?</h2><div></div>
         <!-- Icon Divider-->
         <div class="divider-custom divider-light">
             <div class="divider-custom-line"></div>
@@ -28,7 +28,10 @@
                 Seguime en IG!
             </a>
         </div>
-    </div>
+        
+        </div>
 </section>
-
+<div class="text-center mt-5">
+<a href="{% url 'core:about_dev' %}" class="btn btn-lg btn-secondary text-center mt-5"><i class="fas fa-desktop"></i> Acerca del Desarrollador</a>
+</div>
 {% endblock content %}

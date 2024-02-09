@@ -12,7 +12,7 @@
     
 </header class="masterhead bg-primary text- black text-center">
 <div class="container d-flex align-items-center flex-column">
-   <header> <table border="0" > 
+   <header> <table class="table table-striped" > 
         <thead >
             <th><h2 class="page-section-heading  text-center text-uppercase text-secondary pe-5 mb-0">Nombre</h2></th>
                 <th><h2 class="page-section-heading  text-center text-uppercase text-secondary pe-5 mb-0">Apellido</h2></th>
@@ -31,7 +31,7 @@
 </table>
 </div>
 <div class="text-center mt-4">
-    <a class="btn btn-xl btn-outline-dark"  href=" {% url 'cliente:usuario_create' %}">Nuevo Usuario</a>
+    <a class="btn btn-xl btn-secondary"  href=" {% url 'cliente:usuario_create' %}">Nuevo Usuario</a>
        
    
 {% endblock content %}

@@ -6,8 +6,8 @@ Pela-fit | Ejercicios
 
 
 {% block content %}
-<header class="masthead bg-primary text-white text-center">
-  <div class="container d-flex align-items-center flex-column">
+<header class="masthead bg-primary text-white text-center py-5">
+  <div class="container d-flex align-items-center flex-column ">
 <div class="container">
 </header class="masterhead bg-primary text- black text-center">
 <div class="container d-flex align-items-center flex-column">
@@ -20,22 +20,30 @@ Pela-fit | Ejercicios
     </form>
   </div>
 
-  <table class="table table-striped">
-    <thead>
-      <tr>
-        <th scope="col">Nombre</th>
-        <th scope="col">Acciones</th>
-      </tr>
-    </thead>
+
+  <table class="table table-striped"> 
+    <thead >
+        <th ><h2 class="page-section-heading  text-center text-uppercase text-secondary pe-5 mb-0">Ejercicio</h2></th>
+        <th><h2 class="page-section-heading text-center text-uppercase text-secondary pe-5 mb-0">Repeticiones</h2></th>
+        <th><h2 class="page-section-heading text-center text-uppercase text-secondary pe-5 mb-0">Duración (Minutos)</h2></th>
+        <th><h2 class="page-section-heading text-center text-uppercase text-secondary pe-5 mb-0">Descanso (Minutos)</h2></th>
+        <th><h2 class="page-section-heading text-center text-uppercase text-secondary pe-5 mb-0">Rutina</h2></th>
+        
+    </thead> 
     <tbody>
-      {% for ejercicio in object_list %}
+        {% for ejercicio in object_list %}
         <tr>
-          <td>{{ ejercicio.nombre }}</td>
-          <td>
-            <a href="{% url 'rutina:ejercicio_detail' ejercicio.id %}" class="btn btn-primary me-2">Ver</a>
-            <a href="{% url 'rutina:ejercicio_update' ejercicio.id %}" class="btn btn-warning me-2">Editar</a>
-            <a href="{% url 'rutina:ejercicio_delete' ejercicio.id %}" class="btn btn-danger">Eliminar</a>
-          </td>
+            <td>{{ ejercicio.nombre }}</td>
+            <td>{{ ejercicio.repeticiones }} </td>
+            <td>{{ ejercicio.duracion }}</td>
+            <td>{{ ejercicio.descanso }}</td>
+            <td>{{ ejercicio.rutina_id }}</td>
+            <td><a href="{% url 'rutina:ejercicio_detail' ejercicio.id %}" class="btn btn-primary me-2">Ver</a>
+              <a href="{% url 'rutina:ejercicio_update' ejercicio.id %}" class="btn btn-warning me-2">Editar</a>
+              <a href="{% url 'rutina:ejercicio_delete' ejercicio.id %}" class="btn btn-danger">Eliminar</a></td>
+            </tr>
+ 
+        
         </tr>
       {% empty %}
         <tr>
@@ -44,6 +52,8 @@ Pela-fit | Ejercicios
       {% endfor %}
     </tbody>
   </table>
-</div>
+  <a href="{% url 'rutina:index' %}" class="btn btn-secondary text-center">Volver</a>
+</div>  
+
 {% endblock content %}
 

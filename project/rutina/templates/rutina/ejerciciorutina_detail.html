@@ -6,17 +6,27 @@ Pela-fit | Rutinas
 
 
 {% block content %}
-<header class="masthead bg-primary text-white text-center">
+<header class="masthead bg-primary text-white text-center py-5">
   <div class="container d-flex align-items-center flex-column">
-<div class="container">
-  <h1 class="mt-4">Rutinas</h1>
+  </header class="masterhead bg-primary text- black text-center">
+  <div class="container d-flex align-items-center flex-column">
+  <h1 class="mt-4">{{object.nombre}}</h1>
 
-<ul>
-   <li>{{object.id}}</li>  
-  <li>{{object.nombre}}</li>
-   <li>{{object.descripcion}}</li>
-</ul>
 
+
+  <table class="table table-striped">
+    <tbody>
+      <tr>
+              </tr>
+      <tr>
+        <td>Descripción</td>
+        <td>{{ object.descripcion }}</td>
+      </tr>
+      
+    </tbody>
+  </table>
+
+<a href="{% url 'rutina:ejerciciorutina_list' %}" class="btn btn-secondary">Volver</a>
 
 
   

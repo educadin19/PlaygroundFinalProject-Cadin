@@ -31,12 +31,12 @@ class EjercicioRutinaList(ListView):
 class EjercicioRutinaCreate(CreateView):
     model = EjercicioRutina
     form_class = EjercicioRutinaForm
-    success_url = reverse_lazy ("rutina:ejercicio_list")
+    success_url = reverse_lazy ("rutina:ejerciciorutina_list")
 
 
 class EjercicioRutinaDelete(DeleteView):
     model = EjercicioRutina
-    success_url = reverse_lazy ("rutina:ejercicio_list")
+    success_url = reverse_lazy ("rutina:ejerciciorutina_list")
 
 class EjercicioRutinaDetail(DetailView):
     model = EjercicioRutina
@@ -45,7 +45,7 @@ class EjercicioRutinaDetail(DetailView):
 class EjercicioRutinaUpdate(UpdateView):
     model = EjercicioRutina
     form_class = EjercicioRutinaForm
-    success_url = reverse_lazy ("rutina:ejercicio_list")
+    success_url = reverse_lazy ("rutina:ejerciciorutina_list")
 
 #Ejercicio
 
@@ -53,7 +53,7 @@ class EjercicioList(ListView):
     model = Ejercicio
     template_name = "rutina/ejercicio_list.html"
     context_object_name = "object_list"
-
+    
  
     def get_queryset(self):
         queryset = super().get_queryset()

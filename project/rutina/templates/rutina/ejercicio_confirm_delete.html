@@ -9,10 +9,12 @@ Pela-fit | Ejercicios
 <header class="masthead bg-primary text-white text-center">
   <div class="container d-flex align-items-center flex-column">
 <div class="container">
-  <h1 class="mt-4">Ejercicios</h1>
+  <h1 class="mt-4">Eliminar</h1>
+  <p>{{ ejercicio.nombre }}</p>
 <form method="post">
   {% csrf_token %}
-<p class="fs-5 fst-italic">¿Seguro que quieres borrar este ejercicio?</p>
+<p class="fs-5 fst-italic">¿Seguro que quieres eliminar este ejercicio?</p>
+
 <button type="submit" class ="btn btn-danger"> Sí, estoy seguro</button> <a href="{% url 'rutina:ejercicio_detail' object.id %}"></a>
 
 
